@@ -88,7 +88,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 	-moz-border-left-colors: none;
 	-moz-border-right-colors: none;
 	-moz-border-top-colors: none;
-	background-color: #FAFAFA;
+	background-color: #ffffff;
 	background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
 	background-repeat: no-repeat;
 	border-color: #CCCCCC #CCCCCC #BBBBBB;
@@ -106,35 +106,6 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 }
 				
 				</style>
-	<script type="text/javascript">
-        function validateForm() {
-            var errMsg = "";
-			
-			if(document.getElementById('st[TITLE]').value==""){
-    			errMsg+="* Please enter your title.\n";
-    		}
-    		if(document.getElementById('st[FIRST_NAME]').value==""){
-    			errMsg+="* Please enter your first name.\n";
-    		}
-    		if(document.getElementById('st[LAST_NAME]').value==""){
-    			errMsg+="* Please enter your last name.\n";
-    		}
-    		if(document.getElementById('st[EMAIL]').value==""){
-    			errMsg+="* Please enter your email address.\n";
-    		}
-			if(document.getElementById('st[MOBILE]').value==""){
-    			errMsg+="* Please enter your mobile.\n";
-    		}
-
-            if (errMsg != "") {
-                alert("The following errors were found. Please correct them.\n\n" + errMsg);
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
-    </script>
 				
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 	<script type="text/javascript">
@@ -154,7 +125,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 		
 		var gr = ['zzzz5b88b746f225e560', 'zzzz5b88b7520fba3415'];
 	
-		$.getJSON("http://internal.staging.swiftdigital.com.au/scripts/subscribe/subscribe.php?callback=?",
+		$.getJSON("https://cantaloupe.e-newsletter.com.au/scripts/subscribe/subscribe.php?callback=?",
 		  {
 			st: st,
 			cu: cu,
@@ -162,8 +133,8 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 			method: 'updateall',
 			format: "json",
 			double_opt_in: true,
-			double_opt_in_subject: "Staging Double Opt in Confirmation Email",
-			return_url: "http://internal.staging.swiftdigital.com.au/retest-staging-double-opt-in-thank-you"
+			double_opt_in_subject: "Double Opt in Confirmation Email",
+			return_url: "https://cantaloupe.e-newsletter.com.au/subscription-double-opt-in-thank-you-page"
 		  },
 		  function(data) {
 			console.log(data);
@@ -224,7 +195,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 			    <!-- Start -->
 				<table align="center" width="80%" border="0" cellspacing="0" cellpadding="0" style="font-family:arial, Sans-Serif; font-size:12px;">
 					<tr>
-						<td align="center" style="color:#000000; font-size:16px; padding-bottom:20px; font-weight:bold;">Retest Staging Double Opt In</td>
+						<td align="center" style="color:#000000; font-size:16px; padding-bottom:20px; font-weight:bold;">Live Double Opt In</td>
 					</tr>
 					<tr>
 						<td valign="top">
@@ -232,31 +203,31 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							<input type="hidden" name="parent_id" value="zzzz52a6974176a24826">
 							<table border="0" cellspacing="10" cellpadding="0" style="font-family: Arial, sans-serif; font-size: 12px;">
 							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Title:</strong></td>
+								<td width="150" align="right" valign="middle"> <strong>Title:</strong></td>
 								<td><input type="text" name="st[TITLE]" id="st[TITLE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>First Name:</strong></td>
+								<td width="150" align="right" valign="middle"><strong>First Name:</strong></td>
 								<td><input type="text" name="st[FIRST_NAME]" id="st[FIRST_NAME]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Last Name:</strong></td>
+								<td align="right" valign="middle"> <strong>Last Name:</strong></td>
 								<td><input type="text" name="st[LAST_NAME]" id="st[LAST_NAME]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Email:</strong></td>
+								<td align="right" valign="middle"><strong>Email:</strong></td>
 								<td><input type="text" name="st[EMAIL]" id="st[EMAIL]" size="20" maxlength="200" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Mobile:</strong></td>
+								<td width="150" align="right" valign="middle"><strong>Mobile:</strong></td>
 								<td><input type="text" name="st[MOBILE]" id="st[MOBILE]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Position:</strong></td>
+								<td width="150" align="right" valign="middle"> <strong>Position:</strong></td>
 								<td><input type="text" name="cu[POSITION]" id="cu[POSITION]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
-								<td width="150" align="right" valign="middle"><span style="color:#EA245B;">*</span> <strong>Dietary Requirements:</strong></td>
+								<td width="150" align="right" valign="middle"><strong>Dietary Requirements:</strong></td>
 								<td><input type="text" name="cu[DIETARY_REQUIREMENTS]" id="cu[DIETARY_REQUIREMENTS]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
