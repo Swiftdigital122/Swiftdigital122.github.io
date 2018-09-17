@@ -28,7 +28,41 @@
       <script src="https://suite.peoplelogic.com.au/scripts/jquery/jquery-1.3.2.min.js"></script>    
       <script src="https://suite.peoplelogic.com.au/scripts/jquery/jquery.validate.js"></script>    
       <script src="https://suite.peoplelogic.com.au/scripts/jquery/jQueryUI/js/jquery-ui-1.7.2.custom.min.js"></script>  
-     
+	  
+	  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	  	<script type="text/javascript">
+		function subscribeUser(){
+		frm = document.subscribe;
+		var st = {};
+		st.FIRST_NAME = frm.elements['st[FIRST_NAME]'].value;
+		st.LAST_NAME = frm.elements['st[LAST_NAME]'].value;
+		st.EMAIL = frm.elements['st[EMAIL]'].value;
+		st.MOBILE = frm.elements['st[MOBILE]'].value;
+
+		var cu = {};
+		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
+		cu.cu_JOB_TITLE = frm.elements['cu[JOB_TITLE]'].value;
+		cu.cu_ORGANISATION = frm.elements['cu[ORGANISATION]'].value;
+		cu.cu_POSTCODE = frm.elements['cu[POSTCODE]'].value;
+		
+		var gr = ['zzzz5b9efebc2b4d3532'];
+	
+		$.getJSON("https://cantaloupe.e-newsletter.com.au/scripts/subscribe/subscribe.php?callback=?",
+		  {
+			st: st,
+			cu: cu,
+			gr: gr,
+			method: 'updateall',
+			format: "json",
+			double_opt_in: true,
+			double_opt_in_subject: "Live Double Opt in Confirmation Email",
+			return_url: "https://cantaloupe.e-newsletter.com.au/subscription-double-opt-in-thank-you-page"
+		  },
+		  function(data) {
+			console.log(data);
+		  });
+		}
+	</script
       <script type="text/javascript">    
          //jquery code    
          $(document).ready(function () {    
@@ -80,7 +114,7 @@
          });    
          
       </script>    
-	  
+	
 	  
 	  
 	  
