@@ -121,11 +121,11 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 		var cu = {};
 		//cu.cu_5796_TEST_1 = frm.elements['cu[5796_TEST_1]'].value;
 		cu.cu_POSITION = frm.elements['cu[POSITION]'].value;
-		cu.cu_DIETARY_REQUIREMENTS = frm.elements['cu[DIETARY_REQUIREMENTS]'].value;
+		cu.cu_DIETARY_REQUIREMENT = frm.elements['cu[DIETARY_REQUIREMENT]'].value;
 		
-		var gr = ['zzzz5b9efebc2b4d3532'];
+		var gr = ['zzzz6371c897ab3ff857'];
 	
-		$.getJSON("https://cantaloupe.e-newsletter.com.au/scripts/subscribe/subscribe.php?callback=?",
+		$.getJSON("https://food.e-newsletter.com.au/scripts/subscribe/subscribe.php?callback=?",
 		  {
 			st: st,
 			cu: cu,
@@ -134,7 +134,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 			format: "json",
 			double_opt_in: true,
 			double_opt_in_subject: "Double Opt in Confirmation Email",
-			return_url: "https://cantaloupe.e-newsletter.com.au/subscription-double-opt-in-thank-you-page"
+			return_url: "https://www.bing.com"
 		  },
 		  function(data) {
 			console.log(data);
@@ -228,7 +228,7 @@ a:hover {border-bottom:2px dotted #11b5bb; color:#000000;}
 							</tr>
 							<tr>
 								<td width="150" align="right" valign="middle"><strong>Dietary Requirements:</strong></td>
-								<td><input type="text" name="cu[DIETARY_REQUIREMENTS]" id="cu[DIETARY_REQUIREMENTS]" size="20" maxlength="40" value="" style="width: 250px;"></td>
+								<td><input type="text" name="cu[DIETARY_REQUIREMENT]" id="cu[DIETARY_REQUIREMENT]" size="20" maxlength="40" value="" style="width: 250px;"></td>
 							</tr>
 							<tr>
 								<td>&nbsp;</td>
