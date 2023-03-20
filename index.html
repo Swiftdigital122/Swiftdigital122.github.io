@@ -85,7 +85,7 @@
   <div class="container">
     <div class="row">
       <div class="col intro">
-        <h1>Welcome to Swift Digital’s employee volunteer calendar.</h1>
+        <h1>Welcome to Swift Digital’s employee volunteer calendar FIX.</h1>
         <p>You will find the available volunteering opportunities below for you and your teams to register. Please check back regularly as the Corporate Responsibility team is continually loading opportunities to this calendar.</p>
       </div>
     </div>
@@ -150,21 +150,21 @@
       oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
  
       $.ajax({
-         url: 'https://deepsecurity.swiftdigital.com.au/scripts/EventCalendar/calendar_v2.php',
+         url: 'https://api.swiftdigital.com.au/scripts/EventCalendar/v2/loadAll',
          type: 'POST',
          dataType: 'jsonp',
          data:  {
-                   t3account_id:'zzzz588183480f531928',
-                   calendar_name:'Nino Tiglao Event Calendar', 
+                   t3account_id:'zzzz4f5456669e7c8339',
+                   //calendar_name:'Nino Tiglao Event Calendar', 
                    //calendar name is the edit settings display to specify calendar
                    //calendar_name is not the folder name
-                   filter:{
-                            folder_id:15258,
-                            ev_closure_date:{
-                                           start:parseInt(today.getTime() / 1000),
-                                           end: parseInt(oneYearFromNow.getTime() / 1000)
-                                        } 
-                            }
+                   //filter:{
+                            //folder_id:15258,
+                            //ev_closure_date:{
+                                           //start:parseInt(today.getTime() / 1000),
+                                           //end: parseInt(oneYearFromNow.getTime() / 1000)
+                                        //} 
+                            //}
                 },
 
          success:function(data) {
